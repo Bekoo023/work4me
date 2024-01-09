@@ -11,10 +11,13 @@
     <?php include 'header.php' ?>
 
     <main>
-
+        <div class="video-container">
+            <video autoplay loop muted>
+                <source src="fotos/videoachtergrond.mp4" type="video/mp4">
+            </video>
+        </div>
     </main>
 
     <?php include 'footer.php' ?>
-
 </body>
 </html>
