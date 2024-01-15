@@ -484,12 +484,13 @@ video {
 .form-group input[type="text"],
 .form-group input[type="email"],
 .form-group input[type="password"],
+.form-group input[type="tel"],
 .form-group select {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    box-sizing: border-box; /* Zorgt dat padding niet de breedte beïnvloedt */
+    box-sizing: border-box;
 }
 
 .register-button {
@@ -545,4 +546,22 @@ video {
 
 .login-links a:hover {
     text-decoration: underline;
+}
+
+.dashboard-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 20px;
+}
+
+.dashboard-item{
+    width: 350px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    height: 400px;
+    margin: 10px;
 }

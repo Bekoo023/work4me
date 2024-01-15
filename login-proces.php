@@ -6,19 +6,20 @@ session_start();
 
 $error = "Verkeerde gegevens";
 
-
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $gebruikersnaam = $_POST["gebruikersnaam"];
     $password = $_POST["password"];
 
     $result = mysqli_query($conn, "SELECT * FROM gebruikers WHERE gebruikersnaam='$gebruikersnaam'");
-    $row = mysqli_fetch_assoc($result);
+    $login = mysqli_fetch_assoc($result);
     
-    if ($row && password_verify($password, $row['password'])) {
-
-        $_SESSION['rol'] = $row['rol'];
-        $_SESSION['password'] = $row['password'];
-        $_SESSION['id'] = $row['id'];
+    if ($login && password_verify($password, $login['password'])) {
+        
+        $_SESSION['isloggedIN'] = true;
+        $_SESSION['rol'] = $login['rol'];
+        $_SESSION['gebruikersnaam'] = $login['gebruikersnaam'];
+        $_SESSION['password'] = $login['password'];
+        $_SESSION['id'] = $login['id'];
 
         switch ($_SESSION['rol']) {
             case 'administrator':
@@ -31,11 +32,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 header('Location: dashboard.php');
                 break;
             default:
-                $error = "Verkeerde login gegevens!";
+                header('Location: login.php');
+                break;
         }
         exit;
     } else {
-        $error = "Verkeerde login gegevens!";
+        header('Location: login.php');
     }
 
 }

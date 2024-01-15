@@ -14,8 +14,15 @@
     </div>
     <div class="loginheader">
         <ul>
-            <li><a href="login.php"><button>Login</button></a></li>
-            <li><a href="registreer.php"><button>Registreer</button></a></li>
+            <?php
+            if (isset($_SESSION['isloggedIN']) && $_SESSION['isloggedIN'] == true) {
+                echo '<li><a href="dashboard.php"><button>Mijn Dashboard</button></a></li>';
+                echo '<li><a href="loguit.php"><button>Loguit</button></a></li>';
+            } else {
+                echo '<li><a href="login.php"><button>Login</button></a></li>';
+                echo '<li><a href="registreer.php"><button>Registreer</button></a></li>';
+            }
+            ?>
         </ul>
     </div>
 </div>

@@ -46,6 +46,30 @@
                 </select>
             </div>
             <div class="form-group">
+                <label for="straat">Straatnaam:</label>
+                <input type="text" id="straat" name="straat" required>
+            </div>
+            <div class="form-group">
+                <label for="huisnummer">Huisnummer:</label>
+                <input type="text" id="huisnummer" name="huisnummer" required>
+            </div>
+            <div class="form-group">
+                <label for="postcode">Postcode:</label>
+                <input type="text" id="postcode" name="postcode" required>
+            </div>
+            <div class="form-group">
+                <label for="plaats">Plaats:</label>
+                <input type="text" id="plaats" name="plaats" required>
+            </div>
+            <div class="form-group">
+                <label for="land">Land:</label>
+                <input type="text" id="land" name="land" required>
+            </div>
+            <div class="form-group">
+                <label for="tel">Telefoonnummer:</label>
+                <input type="tel" id="tel" name="tel" required>
+            </div>
+            <div class="form-group">
                 <button type="submit" class="register-button">Registreer</button>
             </div>
             <div class="login-links">
