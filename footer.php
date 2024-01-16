@@ -24,5 +24,5 @@
     </div>
 </footer>
 <div class="footer-bottom">
-    &copy; work4me.com | Designed by Bekir
+    &copy; work4me.nl | Designed by Bekir
 </div>

@@ -214,6 +214,8 @@ video {
     width: 80%;
     margin: 0 auto;
     padding: 20px;
+    text-align: center;
+    max-width: 600px;
 }
 
 .contact-container h1 {
@@ -564,4 +566,95 @@ video {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     height: 400px;
     margin: 10px;
+}
+
+.workout-container form{
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.workout-container form input{
+    border-radius: 10px;
+    width: 200px;
+    height: 40px;
+    padding-left: 20px;
+    border: solid 3px black;
+}
+
+.workout-container form button{
+    border-radius: 10px;
+    width: 90px;
+    height: 40px;
+    margin-left: 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.workout-container form select{
+    border-radius: 10px;
+    background-color: #ffffff;
+    width: 80px;
+    height: 30px;
+    margin-left: 20px;
+    border: solid 3px black;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    padding-left: 10px;
+}
+
+.admin-container{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.admin-stats{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 91.5px;
+}
+
+.user-stats{
+    margin-right: 40px;
+}
+
+.admin-button{
+    height: 35px;
+    background-color: #007bff;
+    width: auto;
+    border-radius: 10px;
+    border: solid 3px black;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.admin-button:hover{
+    background-color: #0056b3;
+}
+
+.textcenter{
+    text-align: center;
+    margin-top: 40px;
+}
+
+.user-table{
+    margin-top: 40px;
+    margin-bottom: 80.5px;
+    text-align: center;
+}
+
+table th{
+    padding-left: 40px;
+}
+
+table td{
+    padding-left: 40px;
 }
