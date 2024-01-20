@@ -5,6 +5,7 @@ require 'database.php';
 ?>
 <div class="bovenheader">
     <p>Word Lid en hou uw proces in de gate</p>
+    <p>Sale! 20% korting op elk pakket</p>
 </div>
 
 <div class="header">
@@ -15,6 +16,7 @@ require 'database.php';
             <li><a href="workout.php"><button>Workouts</button></a></li>
             <li><a href="prijzen.php"><button>Prijzen</button></a></li>
             <li><a href="contact.php"><button>Contact</button></a></li>
+            <li><a href="slideshow.php"><button>Javascript</button></a></li>
             <?php
             if (isset($_SESSION['isloggedIN']) && $_SESSION['isloggedIN'] == true && $_SESSION['rol'] === 'administrator') {
                 echo '<li><a href="resgistratie_admin.php"><button>Registratie</button</a></li>';

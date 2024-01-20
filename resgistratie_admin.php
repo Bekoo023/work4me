@@ -12,14 +12,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = $_POST["password"];
     $email = $_POST["email"];
     $geslacht = $_POST["geslacht"];
-    $rol = $_POST["rol"];
+    $straatnaam = $_POST["straat"];
+    $huisnummer = $_POST["huisnummer"];
+    $postcode = $_POST["postcode"];
+    $plaats = $_POST["plaats"];
+    $land = $_POST["land"];
+    $tel = $_POST["tel"];
+    $defaultRole = 'customer';
 
     $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-                            //fixen!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!11
-    $result = mysqli_query($conn, "INSERT INTO gebruikers (voornaam, tussenvoegsels, achternaam, gebruikersnaam, password, email, geslacht, rol) VALUES ('$voornaam', '$tussenvoegsels', '$achternaam', '$gebruikersnaam', '$hashed_password', '$email', '$geslacht', '$rol')");
+
+    $sql = "SELECT * FROM gebruikers INNER JOIN adres ON gebruikers.id = adres.id";
+                
+    $result = mysqli_query($conn, "INSERT INTO adres (straatnaam, huisnummer, postcode, plaats, land, telefoonnummer) VALUES ('$straatnaam' , '$huisnummer', '$postcode', '$plaats', '$land', '$tel')");
+    $new_user_id = mysqli_insert_id($conn);
+
+    $result = mysqli_query($conn, "INSERT INTO gebruikers (voornaam, tussenvoegsels, achternaam, gebruikersnaam, password, email, geslacht, rol, adresID) VALUES ('$voornaam', '$tussenvoegsels', '$achternaam', '$gebruikersnaam', '$hashed_password', '$email', '$geslacht', '$defaultRole', $new_user_id)");
+
 
      if ($result) {
-        header('Location: dashboard.php');
+        header('Location: login.php');
      } else {
          echo "Registration failed. Please try again.";
      }
@@ -75,6 +87,30 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <option value="man">Man</option>
                     <option value="vrouw">Vrouw</option>
                 </select>
+            </div>
+            <div class="form-group">
+                <label for="straat">Straatnaam:</label>
+                <input type="text" id="straat" name="straat" required>
+            </div>
+            <div class="form-group">
+                <label for="huisnummer">Huisnummer:</label>
+                <input type="text" id="huisnummer" name="huisnummer" required>
+            </div>
+            <div class="form-group">
+                <label for="postcode">Postcode:</label>
+                <input type="text" id="postcode" name="postcode" required>
+            </div>
+            <div class="form-group">
+                <label for="plaats">Plaats:</label>
+                <input type="text" id="plaats" name="plaats" required>
+            </div>
+            <div class="form-group">
+                <label for="land">Land:</label>
+                <input type="text" id="land" name="land" required>
+            </div>
+            <div class="form-group">
+                <label for="tel">Telefoonnummer:</label>
+                <input type="tel" id="tel" name="tel" required>
             </div>
             <div class="form-group">
                 <label for="rol">Rol:</label>

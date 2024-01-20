@@ -58,11 +58,12 @@ body{
     height: 35px;
     width: 90px;
     transition: background-color 0.3s ease;
+    cursor: pointer;
 }
 
 .contentheader button:hover{
     background-color: lightgray;
-    cursor: pointer;
+    border: none;
 }
 
 .loginheader{
@@ -94,11 +95,12 @@ body{
     height: 35px;
     width: 90px;
     transition: background-color 0.3s ease;
+    cursor: pointer;
 }
 
 .loginheader button:hover{
     background-color: lightgray;
-    cursor: pointer;
+    border: none;
 }
 
 footer {
@@ -139,6 +141,7 @@ footer {
 
 .footer-section ul li a:hover {
     color: lightgray;
+    border: none;
 }
 
 .footer-bottom {
@@ -197,6 +200,7 @@ footer {
     width: 100%;
     margin: 0 auto;
     padding: 20px 0;
+    background-color: white;
 }
 
 video {
@@ -242,7 +246,8 @@ video {
 
 .form-group textarea {
     height: 150px;
-    resize: vertical; /* Laat gebruikers de grootte van het textarea aanpassen */
+    resize: vertical;
+
 }
 
 .contactbutton {
@@ -256,6 +261,7 @@ video {
 
 .contactbutton:hover {
     background-color: #0056b3;
+    border: none;
 }
 
 .workout-container {
@@ -298,6 +304,7 @@ video {
 
 .workout-link:hover {
     background-color: #0056b3;
+    border: none;
 }
 
 .workout-detail-container {
@@ -360,6 +367,7 @@ video {
 
 .buttonprijs:hover {
     background-color: #0056b3;
+    border: none;
 }
 
 .testimonials-section {
@@ -377,8 +385,8 @@ video {
 
 .testimonials-section h2 {
     color: #333;
-    padding-top: 20px;
-    padding-left: 20px;
+    padding-top: 30px;
+    padding-left: 50px;
 }
 
 .testimonial-container {
@@ -397,6 +405,7 @@ video {
     font-style: italic;
     text-align: left;
     width: 300px;
+    height: 240px;
 }
 
 .testimonial-block p {
@@ -404,10 +413,11 @@ video {
 }
 
 .testimonial-image {
-    width: 90px;
+    width: 80px;
     height: 80px;
     border-radius: 50%;
     margin-bottom: 10px;
+    object-fit: cover;
 }
 
 .quote-icon {
@@ -419,6 +429,7 @@ video {
 .testimonial-author {
     font-weight: bold;
     font-style: normal;
+
 }
 
 .kennismaken-container{
@@ -429,6 +440,7 @@ video {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     height: 180px;
     padding-top: 20px;
+    background-color: white;
 }
 
 .kennismaken-container p{
@@ -447,6 +459,7 @@ video {
 
 .kennisbutton:hover{
     background-color: #0056b3;
+    border: none;
 }
 
 .txtprijzen{
@@ -508,6 +521,7 @@ video {
 
 .register-button:hover {
     background-color: #0056b3;
+    border: none;
 }
 
 .login-container {
@@ -534,6 +548,7 @@ video {
 
 .login-button:hover {
     background-color: #0056b3;
+    border: none;
 }
 
 .login-links {
@@ -548,6 +563,7 @@ video {
 
 .login-links a:hover {
     text-decoration: underline;
+    border: none;
 }
 
 .dashboard-container{
@@ -638,6 +654,7 @@ video {
 
 .admin-button:hover{
     background-color: #0056b3;
+    border: none;
 }
 
 .textcenter{
@@ -657,4 +674,205 @@ table th{
 
 table td{
     padding-left: 40px;
+}
+
+#slideshow{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: 40px;
+}
+
+#slideshow img {
+    width: 250px;
+    height: 250px;
+    border-radius: 20px;
+}
+
+#slideshow button {
+    position: absolute;
+    top: 60%;
+    background-color: rgba(0, 0, 0, 0.495);
+    border: none;
+    cursor: pointer;
+    height: 35px;
+    width: 120px;
+    transition: ease 0.5s;
+    border-radius: 20px;
+    color: white;
+    font-size: 16px;
+}
+
+#slideshow button:hover{
+    background-color: #000000;
+}
+
+#previous {
+    left: 500px;
+}
+
+#next {
+    right: 500px;
+}
+
+.sale{
+    margin-bottom: 20px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-top: 14px;
+}
+
+.sale p{
+    padding-right: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.original-price {
+    text-decoration: line-through;
+    color: rgb(0, 0, 0);
+    margin-right: 5px;
+}
+
+.discounted-price {
+    font-weight: bold;
+    color: rgb(255, 0, 0);
+}
+
+#countdownTimer{
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 2px;
+}
+
+.middentext{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-top: 30px;
+    color: red;
+}
+
+.bovenheader p{
+    padding-right: 20px;
+}
+
+.sorteer-container{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.sorteer-container form input{
+    border-radius: 10px;
+    width: 200px;
+    height: 40px;
+    padding-left: 20px;
+    border: solid 3px black;
+}
+
+.sorteer-container form button{
+    border-radius: 10px;
+    width: 90px;
+    height: 40px;
+    margin-left: 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.sorteer-container form button:hover{
+    background-color: #0056b3;
+    border: none;
+}
+
+.sorteer-container form select{
+    border-radius: 10px;
+    background-color: #ffffff;
+    width: 80px;
+    height: 30px;
+    margin-left: 20px;
+    border: solid 3px black;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    padding-left: 10px;
+}
+
+.sorteer-container form label{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.bmi-container{
+    text-align: center;
+}
+
+.button-group {
+    display: flex;
+    padding-right: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.bmi-container form input[type="number"]{
+    border-radius: 10px;
+    width: 160px;
+    height: 30px;
+    padding-left: 20px;
+    border: solid 3px black;
+    margin-top: 10px;
+}
+
+.button-group input[type="submit"],
+.button-group input[type="reset"]{
+    border-radius: 10px;
+    width: 90px;
+    height: 35px;
+    margin-left: 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.button-group input:hover[type="submit"],
+.button-group input:hover[type="reset"]{
+    background-color: #0056b3;
+}
+
+.zoekgebruiker-container{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.zoekgebruiker-container form input{
+    border-radius: 10px;
+    width: 160px;
+    height: 30px;
+    padding-left: 20px;
+    border: solid 3px black;
+    margin-top: 10px;
+}
+
+.zoekgebruiker-container form button{
+    border-radius: 10px;
+    width: 90px;
+    height: 35px;
+    margin-left: 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.zoekgebruiker-container form button:hover{
+    background-color: #0056b3;
 }
