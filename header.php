@@ -5,11 +5,12 @@ require 'database.php';
 ?>
 <div class="bovenheader">
     <p>Word Lid en hou uw proces in de gate</p>
+    <p>|</p>
     <p>Sale! 20% korting op elk pakket</p>
 </div>
 
 <div class="header">
-    <p class="hoofdtext">Work4Me</p>
+    <a href="index.php"><img src="fotos/logo.jpg" class="logo"></a>
     <div class="contentheader">
         <ul>
             <li><a href="index.php"><button>Home</button></a></li>

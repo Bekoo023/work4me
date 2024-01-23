@@ -29,7 +29,7 @@ if(prevEl != null){
 
 //countdown
 
-var countDownDatum = new Date("Jan 23, 2024 12:00:00").getTime();
+var countDownDatum = new Date("Jan 22, 2024 12:00:00").getTime();
 
 var x = setInterval(function() {
 

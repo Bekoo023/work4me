@@ -178,7 +178,7 @@ footer {
         width: 45%;
     }
 
-    .kennismaken-container, .testimonial-container, .voortext {
+    .maken-container, .testimonial-container, .voortext {
         flex-direction: column;
     }
 
@@ -875,4 +875,13 @@ table td{
 
 .zoekgebruiker-container form button:hover{
     background-color: #0056b3;
+}
+
+.logo{
+    width: 80px;
+    height: 80px;
+    border-radius: 20px;
+    position: absolute;
+    left: 50px;
+    top: 10px;
 }
